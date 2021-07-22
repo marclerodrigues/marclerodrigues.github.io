@@ -1,0 +1,182 @@
+<html lang="en" class="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Products Card Challenge</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body class="body">
+    <div class="card">
+      <div class="below-banner">
+        <div class="banner">
+          <h1 class="banner__title">Nike</h1>
+        </div>
+        <img
+          src="assets/img/blue.png"
+          alt="Nike Shoes"
+          data-color="blue"
+          class="shoes active"
+        />
+        <img
+          src="assets/img/red.png"
+          alt="Nike Shoes"
+          data-color="red"
+          class="shoes"
+        />
+        <img
+          src="assets/img/green.png"
+          alt="Nike Shoes"
+          data-color="green"
+          class="shoes"
+        />
+        <img
+          src="assets/img/orange.png"
+          alt="Nike Shoes"
+          data-color="orange"
+          class="shoes"
+        />
+        <img
+          src="assets/img/black.png"
+          alt="Nike Shoes"
+          data-color="black"
+          class="shoes"
+        />
+        <img src="assets/img/logo.png" alt="Nike Logo" class="logo" />
+        <button class="share__button" onclick="share()">
+          <svg
+            class="share__icon"
+            focusable="false"
+            data-icon="share-alt"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="card__content">
+        <div class="product-introduction">
+          <h1 class="products-name" id="products-name">Nike Zoom KD 12</h1>
+          <label for="products-name" class="new selected-color">New</label>
+        </div>
+
+        <h3 class="products-slogan">Men's Running Shoes</h3>
+        <div class="divider"></div>
+        <h3 class="section-title">Product Info</h3>
+        <p class="product-info">
+          Ensure a comfortable running session by wearing this pair of cool
+          running shoes from Nike.
+        </p>
+        <div class="divider"></div>
+        <h3 class="section-title">Color</h3>
+        <div class="colors">
+          <span
+            class="colors__item colors__item--blue colors__item--selected"
+            data-color="blue"
+            onclick="selectColor(this)"
+          ></span>
+          <span
+            class="colors__item colors__item--red"
+            data-color="red"
+            onclick="selectColor(this)"
+          ></span>
+          <span
+            class="colors__item colors__item--green"
+            data-color="green"
+            onclick="selectColor(this)"
+          ></span>
+          <span
+            class="colors__item colors__item--orange"
+            data-color="orange"
+            onclick="selectColor(this)"
+          ></span>
+          <span
+            class="colors__item colors__item--black"
+            data-color="black"
+            onclick="selectColor(this)"
+          ></span>
+        </div>
+        <div class="divider"></div>
+        <h3 class="section-title">Sizes</h3>
+        <div class="sizes">
+          <span
+            class="sizes__item sizes__item--selected selected-color"
+            data-size="7"
+            onclick="selectSize(this)"
+            >7</span
+          >
+          <span class="sizes__item" data-size="8" onclick="selectSize(this)"
+            >8</span
+          >
+          <span class="sizes__item" data-size="9" onclick="selectSize(this)"
+            >9</span
+          >
+          <span class="sizes__item" data-size="10" onclick="selectSize(this)"
+            >10</span
+          >
+          <span class="sizes__item" data-size="11" onclick="selectSize(this)"
+            >11</span
+          >
+        </div>
+        <div class="divider"></div>
+        <div class="totalizer">
+          <button class="add-cart selected-color">
+            <svg
+              class="shopping-cart-icon"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="shopping-cart"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 
+            0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 
+            10.745 24 24 24h69.883l70.248 343.435C147.325 417.1
+             136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072
+              56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447
+               426.165 424 440.326 424 456c0 30.928 25.072 56 56
+                56s56-25.072 
+                56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"
+              ></path></svg
+            >Add to Cart
+          </button>
+          <p class="total">
+            <svg
+              class="dollar-sign"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="dollar-sign"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 288 512"
+            >
+              <path
+                fill="currentColor"
+                d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"
+              ></path></svg
+            >149.99
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
